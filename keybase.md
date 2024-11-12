@@ -1,3 +1,14 @@
+### Keybase proof
+
+I hereby claim:
+
+  * I am jangor67 on github.
+  * I am jdegorter (https://keybase.io/jdegorter) on keybase.
+  * I have a public key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDawmqGXaaUv6L4bG7oQHDR5HmIlPm+/bNPXpRXWdWZdrQMtMEa8VtqDz0Be2tU3zhYAHc0ANOt2FjAJKHm7QuhLBvdQMsoZjgo9VYx3D2j0tXrJ7evVkENfZM4+ehFgJKokBZUUIxYQwprMjkK695bkVAm3Bq08Q0LnJJy6kbXrPM8+mxu2po+YWs9I39a3F4yhHjabm9lhQNEqAiCzeDxthKSBVCvjILz6x80h0FjGVV7Yr0OdKj/3aZHcNje+SOPH6pbytndh/xEbPd6hMP8kG9bkTjD+6d9rArYcz6Adle2jZm6wy1Q5oPWGvmUQCy70HOYK4lPlfkVLBp2Yt6gDgcHGHhliiiGoxB4rX+v/q+ep/sw3XGS6ZF82cv0zCzZoIqxJ8polfHUXhvYviY8y310QlN+manng+UjxUk8GKALthzMUqMyAQ46xcpYWRFWYwXqnvYWgX3Ln03C7jt8KxhjOYVP/hyvUJYhpGFXAiwQPjLGWO5v4d6JExIs4Knq3f+S0kOvaKXsPWnwnO3PG3suGhUOkUV+JNGqatdXNdbfhISAZyafcLjFthnpChnbI7/KKeYoPQr/VGXaudOBxftAN1D6OD5cvf/ujVHVMl+WssriaegCcWnY3uZmeuZiRO7v24kbKpfYl9/SJNzhQwh2ZaRD8j4Ad2yfT3qMzQ==
+
+To claim this, I am signing this object:
+
+```json
 {
   "body": {
     "key": {
@@ -31,3 +42,27 @@
   "seqno": 4,
   "tag": "signature"
 }
+```
+
+signed payload is
+```
+0/DY1BYbpyqYk9tmPaU0AMO+Tk3v+4xqIvFEIAfWKE84ah2tQemDfl9FBGCbANJ+
+56kSUDCN86DrStfVfTxnK3FHHgaMRZ6OmXuC4bc/aTtbH32GbAbh5Yp3sb956NOW
+Ens4hXPEjbdTFZtdSCcyj2y7mkPc+7a5gWvq+U9mJsYuzQiRG23uudQwhuCCEqh9
+ABaXeSDEaUwMDrR0MwenV9dwL+6uilfOnwFgYFg7K5DYX+olnEihunH+jjMXbWa2
+/XtkUe0rGZwbEEoWwxhnLRiFcVK/xI03AvAo36T6Fc/uV9Uvk21/1b2t6frmTusl
+SLwrN8eHO/dV1a2dUuRnc103chooYTS6BDKjQ5hwlTXWp2cp+iWE9bQPz1WZ17kD
+im/nmcNGE+z2gXvOJSaw0DOH6cgNVBOn0o65LBiUl38ESifr8dHFuJ3Dzq7z8YVv
+nIDo84nGCMndUwPkY0Ep2tsHpImaGlCueVoEL8TJOAeP7EEwwDd59cwiBfXq2ETI
+pk1m4S2NJXygc5pdFjo+Pvw7usF9dAZ9xxJmWqAQEXfnkSBs5+CAng5lKsNthIHK
+2p7GV5V3c0YQJd5blRIIvapgZt0GbRKXE8Nwx69rU0IKLEUqPAA5nFS3lU0rqo9G
+X70lM+O5HVKz95wbIRHbh567N+Pp4va9JqEo+mqLVWw=
+```
+
+Notes about the creation of the signe payload
+```
+cp <private-key.ppk> <private-key.pem>
+ssh-keygen -p -f <private-key.pem>  -m pem
+openssl dgst -sha256 -sign <private-key.pem> -out signature.256 keybase.json
+openssl base64 -in  signature.sha256 -out signature.b64
+```
